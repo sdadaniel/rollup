@@ -1,0 +1,32 @@
+{
+  "name": "libjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/cjs/main.js",
+  "module": "lib/ejs/main.js",
+  "scripts": {
+    "clean": "del-cli lib",
+    "build": "yarn clean && yarn rollup -c"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-flow": "^7.22.15",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.5",
+    "@rollup/plugin-json": "^6.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "del-cli": "^5.1.0",
+    "rollup": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.36.0"
+  }
+}

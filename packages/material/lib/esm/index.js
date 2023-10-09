@@ -1,2 +1,7 @@
-import 'react/jsx-runtime';
-//# sourceMappingURL=index.js.map
+import { jsx } from 'react/jsx-runtime';
+
+const Button = ({ text }) => {
+    return jsx("div", { children: text });
+};
+
+export { Button };

@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sources":[],"sourcesContent":[],"names":[],"mappings":";;;;"}
+{"version":3,"file":"index.js","sources":["../../src/components/Button/Button.tsx"],"sourcesContent":["import { ButtonProps } from \"./type\";\r\n\r\nconst Button = ({ text }: ButtonProps) => {\r\n  return <div>{text}</div>;\r\n};\r\n\r\nexport default Button;\r\n"],"names":["_jsx"],"mappings":";;;;AAEA,MAAM,MAAM,GAAG,CAAC,EAAE,IAAI,EAAe,KAAI;IACvC,OAAOA,cAAA,CAAA,KAAA,EAAA,EAAA,QAAA,EAAM,IAAI,EAAA,CAAO,CAAC;AAC3B;;;;"}

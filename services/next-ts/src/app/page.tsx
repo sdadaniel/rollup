@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { add } from "libts";
+import { Button } from "material";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
+          <Button text={"123"} />
           {add(1, 100)}
           <code className={styles.code}>src/app/page.tsx</code>
         </p>

@@ -1,5 +1,9 @@
 'use strict';
 
-require('react/jsx-runtime');
+var jsxRuntime = require('react/jsx-runtime');
 
-//# sourceMappingURL=index.js.map
+const Button = ({ text }) => {
+    return jsxRuntime.jsx("div", { children: text });
+};
+
+exports.Button = Button;

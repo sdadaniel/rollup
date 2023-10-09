@@ -5,6 +5,9 @@
     "packages/*",
     "services/*"
   ],
+  "scripts": {
+    "dev": "npx lerna run dev --scope next-ts"
+  },
   "dependencies": {},
   "devDependencies": {
     "lerna": "^7.3.0"

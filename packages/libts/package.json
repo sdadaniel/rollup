@@ -2,28 +2,25 @@
   "name": "libts",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/cjs/main.js",
-  "module": "lib/ejs/main.js",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
   "scripts": {
-    "clean": "del-cli lib",
-    "build": "yarn clean && yarn rollup -c"
+    "clean": "del-cli lib dist type",
+    "build": "yarn clean && yarn rollup -c",
+    "ts-compile": "yarn tsc -p tsconfig.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "lodash": "^4.17.21"
-  },
   "devDependencies": {
-    "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.5",
     "@rollup/plugin-json": "^6.0.1",
     "@rollup/plugin-node-resolve": "^15.2.2",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
-    "@types/lodash": "^4.14.199",
     "del-cli": "^5.1.0",
     "rollup": "^4.0.2",
+    "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-typescript2": "^0.36.0"
   }
 }

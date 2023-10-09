@@ -1,18 +1,34 @@
+import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import json from "@rollup/plugin-json";
 import typescript from "@rollup/plugin-typescript";
+import dts from "rollup-plugin-dts";
+import packageJson from "./package.json" assert { type: "json" };
 
-export default {
-  input: "src/main.ts",
-  output: [
-    {
-      dir: "lib/cjs",
-      format: "cjs",
-    },
-    {
-      dir: "lib/ejs",
-      format: "esm",
-    },
-  ],
-  plugins: [commonjs(), json(), typescript()],
-};
+export default [
+  {
+    input: "src/index.ts",
+    output: [
+      {
+        file: packageJson.main,
+        format: "cjs",
+        sourcemap: true,
+      },
+      {
+        file: packageJson.module,
+        format: "esm",
+        sourcemap: true,
+      },
+    ],
+    plugins: [
+      resolve(),
+      commonjs(),
+      typescript({ tsconfig: "./tsconfig.json" }),
+    ],
+  },
+
+  {
+    input: "lib/esm/types/index.d.ts",
+    output: [{ file: "lib/index.d.ts" }],
+    plugins: [dts()],
+  },
+];
